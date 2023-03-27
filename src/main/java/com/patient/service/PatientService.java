@@ -14,6 +14,10 @@ public class PatientService {
       @Autowired
       private PatientInterface patientInterface;
 
+      public Patient addPatient(Patient patient){
+            return patientInterface.save(patient);
+      }
+
       public void saveAllPatients(List<Patient> patients){
             patientInterface.saveAll(patients);
       }
